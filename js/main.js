@@ -28,9 +28,7 @@ require.config({
 
 //主体调用
 require([
-    'backbone',
-    'appview',
-    'model'
-],function(Backbone,AppView,TodoModel){
+    'appview'
+],function(AppView){
     new AppView();
 })

@@ -1,10 +1,9 @@
 define([
     'jquery',
     'backbone',
-    'model',
     'todoview',
     'collection',
-],function($,Backbone,TodoModel,TodoView,TodoCollection){
+],function($,Backbone,TodoView,TodoCollection){
     'use strict';
     var AppView = Backbone.View.extend({
         //使用已有结构.

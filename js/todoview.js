@@ -1,10 +1,8 @@
 define([
     'jquery',
     'underscore',
-    'backbone',
-    'model',
-    'collection',
-],function($,_,Backbone,TodoModel,TodoCollection){
+    'backbone'
+],function($,_,Backbone){
     'use strict';
     var TodoView = Backbone.View.extend({
         tagName:'li',
