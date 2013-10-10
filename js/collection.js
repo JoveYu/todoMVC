@@ -3,7 +3,7 @@ define([
 	'backboneLS',
 	'model'
 ],function(BackBone,BackBoneLS,Model){
-	var Collection = BackBone.Collection.extend({
+	var TodoCollection = BackBone.Collection.extend({
 		model:Todo,
 		localStorage:new BackBoneLS,
 
@@ -18,9 +18,9 @@ define([
 			});
 		},
 		//反选未完成
-		remain_todo:function(){
+		active_todo:function(){
 			return this.without.apply(this, this.completed());
 		}
 	});
-	return new Collection();
+	return new TodoCollection();
 });

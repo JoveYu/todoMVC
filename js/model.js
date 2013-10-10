@@ -1,9 +1,9 @@
 define([
 	'underscore',
 	'backbone'
-],function(_,BackBone){
+],function(_,Backbone){
 	'use strict';
-	var Todo=BackBone.Model.extend({
+	var TodoModel=Backbone.Model.extend({
 		//默认属性
 		defaults:{
 			memo:'something to do',
@@ -16,5 +16,5 @@ define([
 			});
 		}
 	});
-	return Todo;
+	return TodoModel;
 });
