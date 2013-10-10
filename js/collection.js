@@ -2,10 +2,12 @@ define([
 	'backbone',
 	'backboneLS',
 	'model'
-],function(BackBone,BackBoneLS,Model){
+],function(BackBone,BackBoneLS,TodoModel){
 	var TodoCollection = BackBone.Collection.extend({
-		model:Todo,
-		localStorage:new BackBoneLS,
+		model:TodoModel,
+
+		//保存
+		localStorage:new BackBoneLS('todo'),
 
 		//根据flag判断是否完成
 		completed_todo:function(){

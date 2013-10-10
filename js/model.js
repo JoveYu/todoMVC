@@ -7,14 +7,18 @@ define([
 		//默认属性
 		defaults:{
 			memo:'something to do',
-			flag:0
+			flag:false
 		},
-		save:function(){
+		toggle:function(){
 			this.save({
 				//处理完成和取消完成
-				flag:1-this.get('flag')
+				flag:!this.get('flag')
 			});
-		}
+			console.log({flag:!this.get('flag')});
+		},
+		clear:function(){
+            this.destroy();
+        }
 	});
 	return TodoModel;
 });
