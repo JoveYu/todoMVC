@@ -13,7 +13,7 @@ define([
 				//处理完成和取消完成
 				flag:!this.get('flag')
 			});
-			console.log({flag:!this.get('flag')});
+			//console.log({flag:!this.get('flag')});
 		},
 		clear:function(){
             this.destroy();

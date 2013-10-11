@@ -28,7 +28,11 @@ require.config({
 
 //主体调用
 require([
-    'appview'
-],function(AppView){
+    'appview',
+    'router'
+],function(AppView,TodoRouter){
+    new TodoRouter();
+    Backbone.history.start();
+
     new AppView();
 })
