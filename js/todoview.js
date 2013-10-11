@@ -29,15 +29,15 @@ define([
             //重新显示已完成
             $(this.el).toggleClass('completed', this.model.get('flag'));
 
-            var a=$('#filters li a.selected').attr('href').split('/')[1];
-            var b=false;
-            if(a=='active'&&this.model.get('flag')){
-                b=true;
-            }else if(a=='completed'&&!this.model.get('flag')){
-                b=true;
-            }
-            console.log(b)
-            $(this.el).toggleClass('hidden',b);
+            // var a=$('#filters li a.selected').attr('href').split('/')[1];
+            // var b=false;
+            // if(a=='active'&&this.model.get('flag')){
+            //     b=true;
+            // }else if(a=='completed'&&!this.model.get('flag')){
+            //     b=true;
+            // }
+            // console.log(b)
+            // $(this.el).toggleClass('hidden',b);
             this.input = this.$('.edit');
             return this
         },
