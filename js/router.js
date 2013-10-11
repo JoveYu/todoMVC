@@ -12,10 +12,6 @@ define([
         change_state:function(state){
             //下方标记
             $('#filters li a').removeClass('selected');
-            //全部显示列表
-            $('#main ul li').each(function(){
-                    $(this).removeClass("hidden");
-            });
             //隐藏部分
             if(state){
                 if(state=='active'){
@@ -27,10 +23,15 @@ define([
                 $('#main ul li').each(function(){
                     if($(this).hasClass("completed")==b){
                         $(this).addClass("hidden");
+                    }else{
+                        $(this).removeClass("hidden");
                     }
                 });
             }else{
                 $('#filters li a').filter('[href="#/"]').addClass('selected');
+                $('#main ul li').each(function(){
+                    $(this).removeClass("hidden");
+                });
             }
         }
     });
